@@ -6,14 +6,14 @@
       "description": "BYU-Idaho graduate with a Bachelor’s (BS) in Software Engineering. I also earned a minor in Computer Engineering and Data Science. I love to learn new things and solve problems.\n",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\nContact Me\r\n\r\n kyle@tollivers.org\r\n (805)367-6723\r\n Highland, Utah, USA\r\n linkedin.com/in/kctolli/\r\n kctolli.github.io\r\n github.com/kctolli\r\n twitter.com/kyle_tolliver\r\n\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-03-14T01:14:39-07:00"
+      "last_modified": "2021-03-14T01:23:40-07:00"
     },
     {
       "path": "index.html",
       "title": "A blog of coding tips and tutorials.",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-03-14T01:14:41-07:00"
+      "last_modified": "2021-03-14T01:23:41-07:00"
     }
   ],
   "collections": ["posts/posts.json"]
