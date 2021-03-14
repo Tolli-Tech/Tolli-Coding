@@ -3,7 +3,7 @@ title: "Git Readme"
 description: |
   How to setup a github user readme
 author: Kyle Tolliver
-date: 03-11-2021
+date: 03-13-2021
 output:
   distill::distill_article:
     self_contained: false
@@ -16,11 +16,11 @@ This page is a tutorial for how to set up a useful readme for your github user.
 * Install R and RStudio
 * Setup up a Github user
 
-## Step 1 -- Create Repo
+## Step 1 -- Create Repository
 
 First you will have to create a repository with the name of the repo the same as your github username.
 
-![](../../img/new.jpg)
+![](https://github.com/Tolli-Tech/Tolli-Coding/raw/main/img/new.jpg)
 
 You can see it's set to public that is needed for everyone to see the repo. And Initialize the repo with a Readme File. 
 
@@ -32,31 +32,30 @@ There are two different ways to create the Rmd file for this project.
 
 Top left of R Studio there is a white box with a plus in a green circle. Press that then a popup will show up. Go to templates and scroll till you find the github document template. It will open an untitled file. The file heading will say: 
 
-    `--- 
+    --- 
     title: "Untitled" 
     output: github_document 
-    ---`.
+    ---
 
 Then Change title to your name first and last. (For example if I was John Doe then the title would be 'title: "John Doe"')
 
 Save the file as Readme.Rmd
 
-### 2.2 Method
+### 2.2 -- Method 2
 
 Top left of R Studio there is a white box with a plus in a green circle. Press that then a popup will show up. Pick any template for this method it doesn't matter. It will open an untitled file. The file heading will say:
 
-    `--- 
+    --- 
     title: "Untitled" 
     output: template_document
-    ---`.
+    ---
     
 Rewrite the heading to say:     
 
-
-    `--- 
+    --- 
     title: "First_name Last_name" 
     output: template_document
-    ---`.
+    ---
     
 Save the file as Readme.Rmd
 
@@ -64,10 +63,56 @@ Save the file as Readme.Rmd
 
 You can source a [R script]() that will have functions useful for the readme file. The command used needs to be created in an R chunk. 
 
+    source("https://raw.githubusercontent.com/Tolli-Tech/Tolli-Coding/main/_posts/2021-03-13-git-readme/git-readme_files/git-readme.R")
 
-    ``
+## Step 4 -- Add Base Level Links
 
+Link important sites, such as:
 
+* Eportfolio
+* Resume
+* College Diploma
+* Etc.
 
+Use the link convention for Rmd files:
 
+    [name](link)
+
+## Step 5 -- User Stats  
+
+Put the following function call in a R chunk:
+
+    user_stats(username)
     
+For example if my username was johndoe the function call would look like:  
+
+    user_stats(johndoe)
+    
+## Step 6 -- Highlights
+
+Add a bulleted list of projects you want to highlight. Use the same link convention as earlier.
+
+## Step 7 -- Knit
+
+There are two different ways to knit the Rmd in RStudio. 
+
+### Method 7.1 -- Short Keys
+
+The short keys need are:
+
+* Windows -- Ctrl + Shift + K
+* Mac -- Command + Shift + K
+
+### Method 7.2 -- Manual Knit
+
+At the top left corner off the Rmd file there is a button with yarn and needles with the 'Knit' next to it. 
+
+## Step 8 -- Git It
+
+When you feel your Readme file is good, you would be read to push it to github. (You can edit and push the file over and over again) 
+
+Use either the github website or github desktop app. Write a commit message, could be whatever you want. (A good commit message would be: 'Readme.md edit')
+
+The push the file to to your repository. 
+
+Now you are good to go and have a impressive Github profile. 

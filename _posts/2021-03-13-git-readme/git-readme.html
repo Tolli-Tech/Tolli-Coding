@@ -90,8 +90,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   
   
   <!--  https://schema.org/Article -->
-  <meta property="article:published" itemprop="datePublished" content="2021-03-11"/>
-  <meta property="article:created" itemprop="dateCreated" content="2021-03-11"/>
+  <meta property="article:published" itemprop="datePublished" content="2021-03-13"/>
+  <meta property="article:created" itemprop="dateCreated" content="2021-03-13"/>
   <meta name="article:author" content="Kyle Tolliver"/>
   
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -109,12 +109,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Git Readme"]},{"type":"character","attributes":{},"value":["How to setup a github user readme\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Kyle Tolliver"]}]}]},{"type":"character","attributes":{},"value":["03-11-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Git Readme"]},{"type":"character","attributes":{},"value":["How to setup a github user readme\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Kyle Tolliver"]}]}]},{"type":"character","attributes":{},"value":["03-13-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["git-readme_files/anchor-4.2.2/anchor.min.js","git-readme_files/bowser-1.9.3/bowser.min.js","git-readme_files/distill-2.2.21/template.v2.js","git-readme_files/jquery-1.11.3/jquery.min.js","git-readme_files/popper-2.6.0/popper.min.js","git-readme_files/tippy-6.2.7/tippy-bundle.umd.min.js","git-readme_files/tippy-6.2.7/tippy-light-border.css","git-readme_files/tippy-6.2.7/tippy.css","git-readme_files/tippy-6.2.7/tippy.umd.min.js","git-readme_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["git-readme_files/anchor-4.2.2/anchor.min.js","git-readme_files/bowser-1.9.3/bowser.min.js","git-readme_files/distill-2.2.21/template.v2.js","git-readme_files/git-readme.R","git-readme_files/jquery-1.11.3/jquery.min.js","git-readme_files/popper-2.6.0/popper.min.js","git-readme_files/tippy-6.2.7/tippy-bundle.umd.min.js","git-readme_files/tippy-6.2.7/tippy-light-border.css","git-readme_files/tippy-6.2.7/tippy.css","git-readme_files/tippy-6.2.7/tippy.umd.min.js","git-readme_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1452,7 +1452,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Git Readme","description":"How to setup a github user readme","authors":[{"author":"Kyle Tolliver","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-03-11T00:00:00.000-07:00","citationText":"Tolliver, 2021"}
+{"title":"Git Readme","description":"How to setup a github user readme","authors":[{"author":"Kyle Tolliver","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-03-13T00:00:00.000-07:00","citationText":"Tolliver, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1472,7 +1472,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   
   Kyle Tolliver
   
-<br/>03-11-2021
+<br/>03-13-2021
 </div>
 
 <div class="d-article">
@@ -1482,34 +1482,68 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <li>Install R and RStudio</li>
 <li>Setup up a Github user</li>
 </ul>
-<h2 id="step-1-create-repo">Step 1 – Create Repo</h2>
+<h2 id="step-1-create-repository">Step 1 – Create Repository</h2>
 <p>First you will have to create a repository with the name of the repo the same as your github username.</p>
-<p><img src="../../img/new.jpg" /></p>
+<p><img src="https://github.com/Tolli-Tech/Tolli-Coding/raw/main/img/new.jpg" /></p>
 <p>You can see it’s set to public that is needed for everyone to see the repo. And Initialize the repo with a Readme File.</p>
 <h2 id="step-2-create-rmd-file">Step 2 – Create Rmd file</h2>
 <p>There are two different ways to create the Rmd file for this project.</p>
 <h3 id="method-1">2.1 – Method 1</h3>
 <p>Top left of R Studio there is a white box with a plus in a green circle. Press that then a popup will show up. Go to templates and scroll till you find the github document template. It will open an untitled file. The file heading will say:</p>
-<pre><code>`--- 
+<pre><code>--- 
 title: &quot;Untitled&quot; 
 output: github_document 
----`.</code></pre>
+---</code></pre>
 <p>Then Change title to your name first and last. (For example if I was John Doe then the title would be ‘title: “John Doe”’)</p>
 <p>Save the file as Readme.Rmd</p>
-<h3 id="method">2.2 Method</h3>
+<h3 id="method-2">2.2 – Method 2</h3>
 <p>Top left of R Studio there is a white box with a plus in a green circle. Press that then a popup will show up. Pick any template for this method it doesn’t matter. It will open an untitled file. The file heading will say:</p>
-<pre><code>`--- 
+<pre><code>--- 
 title: &quot;Untitled&quot; 
 output: template_document
----`.</code></pre>
+---</code></pre>
 <p>Rewrite the heading to say:</p>
-<pre><code>`--- 
+<pre><code>--- 
 title: &quot;First_name Last_name&quot; 
 output: template_document
----`.</code></pre>
+---</code></pre>
 <p>Save the file as Readme.Rmd</p>
-<h2 id="step-3-setup-r-script">Step 3 – Setup R Script</h2>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<h2 id="step-3-source-the-r-script">Step 3 – Source the R Script</h2>
+<p>You can source a <a href="">R script</a> that will have functions useful for the readme file. The command used needs to be created in an R chunk.</p>
+<pre><code>source(&quot;https://raw.githubusercontent.com/Tolli-Tech/Tolli-Coding/main/_posts/2021-03-13-git-readme/git-readme_files/git-readme.R&quot;)</code></pre>
+<h2 id="step-4-add-base-level-links">Step 4 – Add Base Level Links</h2>
+<p>Link important sites, such as:</p>
+<ul>
+<li>Eportfolio</li>
+<li>Resume</li>
+<li>College Diploma</li>
+<li>Etc.</li>
+</ul>
+<p>Use the link convention for Rmd files:</p>
+<pre><code>[name](link)</code></pre>
+<h2 id="step-5-user-stats">Step 5 – User Stats</h2>
+<p>Put the following function call in a R chunk:</p>
+<pre><code>user_stats(username)</code></pre>
+<p>For example if my username was johndoe the function call would look like:</p>
+<pre><code>user_stats(johndoe)</code></pre>
+<h2 id="step-6-highlights">Step 6 – Highlights</h2>
+<p>Add a bulleted list of projects you want to highlight. Use the same link convention as earlier.</p>
+<h2 id="step-7-knit">Step 7 – Knit</h2>
+<p>There are two different ways to knit the Rmd in RStudio.</p>
+<h3 id="method-7.1-short-keys">Method 7.1 – Short Keys</h3>
+<p>The short keys need are:</p>
+<ul>
+<li>Windows – Ctrl + Shift + K</li>
+<li>Mac – Command + Shift + K</li>
+</ul>
+<h3 id="method-7.2-manual-knit">Method 7.2 – Manual Knit</h3>
+<p>At the top left corner off the Rmd file there is a button with yarn and needles with the ‘Knit’ next to it.</p>
+<h2 id="step-8-git-it">Step 8 – Git It</h2>
+<p>When you feel your Readme file is good, you would be read to push it to github. (You can edit and push the file over and over again)</p>
+<p>Use either the github website or github desktop app. Write a commit message, could be whatever you want. (A good commit message would be: ‘Readme.md edit’)</p>
+<p>The push the file to to your repository.</p>
+<p>Now you are good to go and have a impressive Github profile.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
