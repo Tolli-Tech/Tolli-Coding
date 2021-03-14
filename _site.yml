@@ -7,7 +7,7 @@ collections:
     disqus: tolli-coding
     #subscribe: _subscribe.html
 description: |
-  A blog of coding tips
+  A blog of coding tips and tutorials.
 output_dir: "_site"
 navbar:
   right:

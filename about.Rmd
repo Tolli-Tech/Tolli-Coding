@@ -1,0 +1,27 @@
+---
+title: "About"
+description: |
+  About the blog
+---
+
+```{r setup, include=FALSE}
+source("https://raw.githubusercontent.com/kctolli/kctolli.github.io/master/site_libs/site.R")
+load_libraries()
+file <- "about"
+```
+
+## About Me
+
+BYU-Idaho graduate with a Bachelor’s (BS) in Software Engineering. I also earned a minor in Computer Engineering and Data Science. I love to learn new things and solve problems.
+
+## Contact Me
+
+```{r}
+print_contact(file)
+```
+
+----
+
+*“Education is not the learning of facts it’s rather the training of the mind to think”* — Albert Eistein
+
+----
