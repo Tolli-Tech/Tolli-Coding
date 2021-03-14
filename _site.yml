@@ -1,7 +1,6 @@
 name: "tolli-coding"
 title: "Tolli-Coding"
 base_url: https://tolli-coding.netlify.app/
-# google_analytics: "G-7N1FC1R48X"
 collections:
   posts:
     disqus: tolli-coding
