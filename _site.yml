@@ -4,7 +4,7 @@ base_url: https://tolli-coding.netlify.app/
 collections:
   posts:
     disqus: tolli-coding
-    #subscribe: _subscribe.html
+    subscribe: _subscribe.html
 description: |
   A blog of coding tips and tutorials.
 output_dir: "_site"
@@ -17,8 +17,8 @@ navbar:
       href: about.html
     #- text: "Resources"
     #  href: resources.html
-    #- text: "Support"
-    #  href: https://www.Ko-fi.com/codingwithavery
+    - text: "Support"
+      href: https://ko-fi.com/kctolli
     - icon: fab fa-github
       href: https://github.com/Tolli-Tech/Tolli-Coding
 output: distill::distill_article
