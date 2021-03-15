@@ -124,4 +124,10 @@ Use either the github website or github desktop app. Write a commit message, cou
 
 Then push the file to to your repository. 
 
+<hr/>
+
 Now you are good to go and have a impressive Github profile. 
+
+Finished product will look similar too: 
+
+![](https://github.com/Tolli-Tech/Tolli-Coding/raw/main/img/readme.jpg)
