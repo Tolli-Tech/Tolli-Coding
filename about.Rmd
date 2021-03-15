@@ -21,3 +21,7 @@ render_site()
 ```{r}
 print_contact(file)
 ```
+
+### Support Me
+
+[Venmo me](https://account.venmo.com/) -- Kyle-C-Tolliver

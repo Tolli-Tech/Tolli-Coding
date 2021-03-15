@@ -1,13 +1,13 @@
 name: "tolli-coding"
 title: "Tolli-Coding"
-base_url: https://tolli-coding.netlify.app/
+base_url: https://tolli-coding.netlify.app
 collections:
   posts:
     disqus: tolli-coding
     subscribe: _subscribe.html
 description: |
   A blog of coding tips and tutorials.
-output_dir: "_site"
+output_dir: "."
 navbar:
   search: true
   right:
@@ -17,8 +17,6 @@ navbar:
       href: about.html
     #- text: "Resources"
     #  href: resources.html
-    - text: "Support"
-      href: https://ko-fi.com/kctolli
     - icon: fab fa-github
       href: https://github.com/Tolli-Tech/Tolli-Coding
 output: distill::distill_article

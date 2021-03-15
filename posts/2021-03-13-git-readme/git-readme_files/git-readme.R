@@ -1,4 +1,3 @@
-
 # User Stats
 
 user_stats <- function(user){
