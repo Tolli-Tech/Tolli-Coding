@@ -2142,8 +2142,15 @@ output: template_document
 ---</code></pre>
 <p>Save the file as Readme.Rmd</p>
 <h2 id="step-3-source-the-r-script">Step 3 – Source the R Script</h2>
-<p>You can source a <a href="">R script</a> that will have functions useful for the readme file. The command used needs to be created in an R chunk.</p>
+<p>You can source a <a href="https://raw.githubusercontent.com/Tolli-Tech/Tolli-Coding/main/_posts/2021-03-13-git-readme/git-readme_files/git-readme.R">R script</a> that will have the function useful for the readme file. The command needs to inside in an R chunk.</p>
 <pre><code>source(&quot;https://raw.githubusercontent.com/Tolli-Tech/Tolli-Coding/main/_posts/2021-03-13-git-readme/git-readme_files/git-readme.R&quot;)</code></pre>
+<p>Or you could just add this function in an R chunk.</p>
+<pre><code>user_stats &lt;- function(user){
+pander::pander(glue::glue(&#39;&lt;h2&gt;User Stats&lt;/h2&gt;
+&lt;a href=&quot;https://github.com/anuraghazra/github-readme-stats&quot; align=&quot;center&quot;&gt;
+&lt;img style=&quot;max-width:100%;&quot; height=&quot;160&quot; align=&quot;center&quot; 
+src=&quot;https://github-readme-stats.vercel.app/api/top-langs/?username={user}&amp;layout=compact&amp;theme=gruvbox&quot; /&gt;&lt;/a&gt; \n\n\n&#39;))
+}</code></pre>
 <h2 id="step-4-add-base-level-links">Step 4 – Add Base Level Links</h2>
 <p>Link important sites, such as:</p>
 <ul>
@@ -2176,7 +2183,7 @@ output: template_document
 <p>Use either the github website or github desktop app. Write a commit message, could be whatever you want. (A good commit message would be: ‘Readme.md edit’)</p>
 <p>The push the file to to your repository.</p>
 <p>Now you are good to go and have a impressive Github profile.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <div class="article-footer">
   <p class="social_footer">

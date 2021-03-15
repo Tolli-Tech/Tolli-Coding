@@ -61,9 +61,18 @@ Save the file as Readme.Rmd
 
 ## Step 3 -- Source the R Script
 
-You can source a [R script]() that will have functions useful for the readme file. The command used needs to be created in an R chunk. 
+You can source a [R script](https://raw.githubusercontent.com/Tolli-Tech/Tolli-Coding/main/_posts/2021-03-13-git-readme/git-readme_files/git-readme.R) that will have the function useful for the readme file. The command needs to inside in an R chunk. 
 
     source("https://raw.githubusercontent.com/Tolli-Tech/Tolli-Coding/main/_posts/2021-03-13-git-readme/git-readme_files/git-readme.R")
+    
+Or you could just add this function in an R chunk. 
+
+    user_stats <- function(user){
+    pander::pander(glue::glue('<h2>User Stats</h2>
+    <a href="https://github.com/anuraghazra/github-readme-stats" align="center">
+    <img style="max-width:100%;" height="160" align="center" 
+    src="https://github-readme-stats.vercel.app/api/top-langs/?username={user}&layout=compact&theme=gruvbox" /></a> \n\n\n'))
+    }
 
 ## Step 4 -- Add Base Level Links
 
@@ -113,6 +122,6 @@ When you feel your Readme file is good, you would be read to push it to github. 
 
 Use either the github website or github desktop app. Write a commit message, could be whatever you want. (A good commit message would be: 'Readme.md edit')
 
-The push the file to to your repository. 
+Then push the file to to your repository. 
 
 Now you are good to go and have a impressive Github profile. 
