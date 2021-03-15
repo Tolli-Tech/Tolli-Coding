@@ -7,7 +7,15 @@
     <description>A blog of coding tips and tutorials.
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Sat, 13 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 15 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>R-HTML</title>
+      <dc:creator>Kyle Tolliver</dc:creator>
+      <link>https://tolli-coding.netlify.app/posts/2021-03-15-r-html</link>
+      <description>Functions used to convert R code to HTML</description>
+      <guid>https://tolli-coding.netlify.app/posts/2021-03-15-r-html</guid>
+      <pubDate>Mon, 15 Mar 2021 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Git Readme</title>
       <dc:creator>Kyle Tolliver</dc:creator>

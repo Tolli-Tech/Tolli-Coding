@@ -1,0 +1,90 @@
+---
+title: "R-HTML"
+description: |
+  Functions used to convert R code to HTML
+author: Kyle Tolliver
+date: 03-15-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+This page is a tutorial shows you R functions that assistant in creating a HTML document from an Rmd file and R chunk. 
+
+All parameters that will be based to the functions need to be strings (`""` or  `''`).
+
+## Newline and Pagebreak
+
+These are a simple functions.
+
+    print_newline <- function(){pander::pander("\n")}
+
+It is related to the `<br />`  that is native to HTML. 
+
+    pagebreak <- function(){pander::pander('<hr /><div style="clear:both;"></div>')}
+    
+It is related to the `<hr />`  that is native to HTML.     
+
+## Heading
+
+    print_h1 <- function(h1){pander::pander(glue::glue("# {h1} \n\n\n"))}
+    print_h2 <- function(h2){pander::pander(glue::glue("## {h2} \n\n\n"))}
+    print_h3 <- function(h3){pander::pander(glue::glue("### {h3} \n\n\n"))}
+    print_h4 <- function(h4){pander::pander(glue::glue("#### {h4} \n\n\n"))}
+    print_h5 <- function(h5){pander::pander(glue::glue("##### {h5} \n\n\n"))}
+    print_h6 <- function(h6){pander::pander(glue::glue("###### {h6} \n\n\n"))}
+
+These functions help create headings for the using R. It is related to the `<h#>heading</h#>` that is native to HTML. 
+
+## Images
+
+    print_pic <- function(img){pander::pander(glue::glue("![]({img}) \n\n\n"))}
+
+These functions help produce images for the using R. It is related to the `<img src = pic>` that is native to HTML. 
+
+## Images
+
+    print_link <- function(txt, url){pander::pander(glue::glue("[txt](url) \n\n\n"))}
+
+These functions help produce links for the using R. It is related to the `<a href="url">link text</a>` that is native to HTML. 
+
+## Formatting Elements
+
+    print_strong <- function(p){pander::pander(glue::glue('<strong>{p}</strong>'))} 
+    print_bold <- function(p){pander::pander(glue::glue('<b>{p}</b>'))} 
+    print_italic <- function(p){pander::pander(glue::glue('<i>{p}</i>'))} 
+    print_em <- function(p){pander::pander(glue::glue('<em>{p}</em>'))}     
+    print_mark <- function(p){pander::pander(glue::glue('<mark>{p}</mark>'))} 
+    print_small <- function(p){pander::pander(glue::glue('<small>{p}</small>'))} 
+    print_del <- function(p){pander::pander(glue::glue('<del>{p}</del>'))} 
+    print_ins <- function(p){pander::pander(glue::glue('<ins>{p}</ins>'))} 
+    print_sub <- function(p){pander::pander(glue::glue('<sub>{p}</sub>'))} 
+    print_sup <- function(p){pander::pander(glue::glue('<sup>{p}</sup>'))} 
+    
+HTML contains several elements for defining text with a special meaning. Formatting elements are designed to display special types of text.  
+
+## JavaScript
+
+    javascript_src <- function(source){pander::pander(glue::glue('<script src={source}></script>'))}
+    javascript_in <- function(fun){pander::pander(glue::glue('<script>{fun}</script>'))} 
+    javascript_no <- funtion(fun, err = "JavaScript not supported"){pander::pander(glue::glue('<script>{fun}</script><noscript>{err}</noscript>'))} 
+    
+These functions allow you to add javascript to you HTML file using R.   
+
+## CSS
+
+    css_src <- function(source){pander::pander(glue::glue('<link rel="stylesheet" href={source}>'))}
+    css_in <- function(style){pander::pander(glue::glue('<style>{style}</style>'))}
+
+These functions allow you to add styles to you HTML file using R.  
+
+## Media
+
+    add_audio <- function(source){pander::pander(glue::glue('<audio controls><source src={source} type="audio/mpeg">Audio element not supported.</audio>'))}
+    add_video <- function(source){pander::pander(glue::glue('<video controls><source src={source} type="audio/mp4">Video element not supported.</video>'))}
+    
+These functions allow you to add media to you HTML file using R that is in the local directory.  
+    
+    add_youtube <- function(url, width = 420, height = 345){pander::pander(glue::glue('<iframe src={url} width="{width}" height="{height}"></iframe>'))}
+    
+These functions allow you to add video to you HTML file using R that is online such as youtube. (width and height are numbers)
