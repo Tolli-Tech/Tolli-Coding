@@ -61,9 +61,9 @@ Save the file as Readme.Rmd
 
 ## Step 3 -- Source the R Script
 
-You can source a [R script](https://raw.githubusercontent.com/Tolli-Tech/Tolli-Coding/main/_posts/2021-03-13-git-readme/git-readme_files/git-readme.R) that will have the function useful for the readme file. The command needs to inside in an R chunk. 
+You can source a [R script](https://raw.githubusercontent.com/Tolli-Tech/Tolli-Coding/main/rscript/git-readme.R) that will have the function useful for the readme file. The command needs to inside in an R chunk. 
 
-    source("https://raw.githubusercontent.com/Tolli-Tech/Tolli-Coding/main/_posts/2021-03-13-git-readme/git-readme_files/git-readme.R")
+    source("https://raw.githubusercontent.com/Tolli-Tech/Tolli-Coding/main/rscript/git-readme.R")
     
 Or you could just add this function in an R chunk. 
 

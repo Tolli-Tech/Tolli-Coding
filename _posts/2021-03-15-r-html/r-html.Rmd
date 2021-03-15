@@ -13,9 +13,9 @@ This page is a tutorial shows you R functions that assistant in creating a HTML 
 
 All parameters that will be based to the functions need to be strings (`""` or  `''`).
 
-All functions are in a [r script]()
+All functions are in a [r script](https://raw.githubusercontent.com/Tolli-Tech/Tolli-Coding/main/rscript/r-html.R).
   
-    source("")
+    source("https://raw.githubusercontent.com/Tolli-Tech/Tolli-Coding/main/rscript/r-html.R")
 
 ## Newline and Pagebreak
 
