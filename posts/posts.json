@@ -1,5 +1,22 @@
 [
   {
+    "path": "posts/2021-03-18-mode/",
+    "title": "Mode",
+    "description": "How to change the color mode of a web page",
+    "author": [
+      {
+        "name": "Kyle Tolliver",
+        "url": {}
+      }
+    ],
+    "date": "2021-03-18",
+    "categories": [],
+    "contents": "\r\nThis page is a tutorial shows you how to change the color mode of a web page.\r\nJavaScript\r\nTo change mode you need a simple function in your Javascript file or script section of your HTML.\r\nfunction newmode() {document.body.classList.toggle(\"new-mode\");}\r\nSo for dark mode the function would look like.\r\nfunction darkmode() {document.body.classList.toggle(\"dark-mode\");}\r\nCSS\r\nYou will need a base style so the feature will be body then a .new-mode feature.\r\nbody {background-color: `body-background`; color: `body-color`;}\r\n.new-mode {background-color: `new-background`; color: `new-color`;}\r\nFor dark mode the style code would look like.\r\nbody {background-color: white; color: black;}\r\n.dark-mode {background-color: black; color: white;}\r\nHTML\r\nThe function will be incorperated into a button with class “btn” to allow for styling.\r\nThe HTML code would looks like one of the following.\r\n<button class=\"btn\" onclick=\"newmode()\">Toggle New Mode<\/button>\r\n<button class=\"btn\" onclick=\"newmode()\"><i class=\"fas fa-adjust\">Toggle New Mode<\/i><\/button>\r\nFor dark mode the code would look like one of the following.\r\n<button class=\"btn\" onclick=\"darkmode()\">Toggle Dark Mode<\/button>\r\n<button class=\"btn\" onclick=\"darkmode()\"><i class=\"fas fa-adjust\">Toggle Dark Mode<\/i><\/button>\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2021-03-18T21:57:53-06:00",
+    "input_file": {}
+  },
+  {
     "path": "posts/2021-03-15-r-html/",
     "title": "R-HTML",
     "description": "Functions used to convert R code to HTML",

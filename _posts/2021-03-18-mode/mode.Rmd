@@ -1,0 +1,48 @@
+---
+title: "Mode"
+description: |
+  How to change the color mode of a web page
+author: Kyle Tolliver
+date: 03-18-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+This page is a tutorial shows you how to change the color mode of a web page.
+
+## JavaScript
+
+To change mode you need a simple function in your Javascript file or script section of your HTML.
+
+    function newmode() {document.body.classList.toggle("new-mode");}
+
+So for dark mode the function would look like. 
+
+    function darkmode() {document.body.classList.toggle("dark-mode");}
+
+## CSS
+
+You will need a base style so the feature will be body then a .new-mode feature. 
+
+    body {background-color: `body-background`; color: `body-color`;}
+    .new-mode {background-color: `new-background`; color: `new-color`;}
+
+For dark mode the style code would look like. 
+
+    body {background-color: white; color: black;}
+    .dark-mode {background-color: black; color: white;}
+
+## HTML
+
+The function will be incorperated into a button with class "btn" to allow for styling.
+
+The HTML code would looks like one of the following.
+
+    <button class="btn" onclick="newmode()">Toggle New Mode</button>
+    <button class="btn" onclick="newmode()"><i class="fas fa-adjust">Toggle New Mode</i></button>
+    
+For dark mode the code would look like one of the following.
+    
+    <button class="btn" onclick="darkmode()">Toggle Dark Mode</button>
+    <button class="btn" onclick="darkmode()"><i class="fas fa-adjust">Toggle Dark Mode</i></button>
