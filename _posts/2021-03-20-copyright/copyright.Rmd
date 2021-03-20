@@ -1,0 +1,28 @@
+---
+title: "Copyright"
+description: |
+  How to copyright intellectual property
+author: Kyle Tolliver
+date: 03-20-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+This page is a tutorial of r function that helps make copyrighting intellectual property on a website.
+
+You need to run this function first `install.packages("lubridate")` or `install.packages("tidyverse")`.
+
+## The R function
+
+    copyright <- function(start, name){
+      current_year <- lubridate::year(Sys.Date()) 
+      if (current_year != start) {str <- glue::glue('{start} - {current_year} -- {name}')}
+      else if (start < current_year) {str <- glue::glue('{current_year} -- {name}')}
+      else {str <- 'Time Error'}
+      pander::pander(glue::glue('<i class="far fa-copyright"></i>{str}'))
+    }
+    
+This function is needs a start year and name pass into the function call. 
+
+To calculate current year the [lubridate](https://lubridate.tidyverse.org/) package is used.
