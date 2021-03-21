@@ -9,7 +9,8 @@ output:
     self_contained: false
 ---
 
-This page is a tutorial of r function that helps make copyrighting intellectual property on a website.
+This page is a tutorial of r function that helps make copyrighting intellectual property on a website. 
+I also walks through the file header needed to license property with *GNU General Public License*.
 
 You need to run this function first `install.packages("lubridate")` or `install.packages("tidyverse")`.
 
@@ -26,3 +27,23 @@ You need to run this function first `install.packages("lubridate")` or `install.
 This function is needs a start year and name pass into the function call. 
 
 To calculate current year the [lubridate](https://lubridate.tidyverse.org/) package is used.
+
+## File Header
+
+    file name 
+    Copyright year name 
+    
+    This program is free software: you can redistribute it and/or modify 
+    it under the terms of the GNU General Public License as published by 
+    the Free Software Foundation, either version 3 of the License, or 
+    (at your option) any later version. 
+     
+    This program is distributed in the hope that it will be useful, 
+    but WITHOUT ANY WARRANTY; without even the implied warranty of 
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the 
+    GNU General Public License for more details. 
+      
+    You should have received a copy of the GNU General Public License 
+    along with this program.  If not, see <https://www.gnu.org/licenses/>. 
+    
+At the top of all programming files paste the above section and comment it out. I would suggest using *GNU General Public License* to license your work.

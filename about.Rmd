@@ -1,7 +1,7 @@
 ---
 title: "About Me"
 description: |
-  BYU-Idaho graduate with a Bachelor’s (BS) in Software Engineering. I also earned a minor in Computer Engineering and Data Science. I love to learn new things and solve problems.
+  BYU-Idaho graduate with a Bachelor’s (BS) in Software Engineering. I also earned a minor in Computer Engineering and Data Science. I have over three years of tutoring and teaching experience. I love helping people learn new things and learn new things for myself.
 editor_options: 
   chunk_output_type: console
 ---
@@ -16,12 +16,10 @@ file <- "about"
 render_site()
 ```
 
-## Contact Me
-
 ```{r}
+print_h2("Contact Me")
 print_contact(file)
+print_h3("Support Me")
+pander("[Venmo me](https://account.venmo.com/) -- @Kyle-C-Tolliver")
 ```
 
-### Support Me
-
-[Venmo me](https://account.venmo.com/) -- Kyle-C-Tolliver
