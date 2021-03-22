@@ -38,8 +38,8 @@ You need to run this function first `install.packages("lubridate")` or `install.
 
     copyright <- function(start, name){
       current_year <- lubridate::year(Sys.Date()) 
-      if (current_year != start) {str <- glue::glue('{start} - {current_year} -- {name}')}
-      else if (start < current_year) {str <- glue::glue('{current_year} -- {name}')}
+      if (start < current_year) {str <- glue::glue('{start} - {current_year} -- {name}')}
+      else if (start == current_year) {str <- glue::glue('{current_year} -- {name}')}
       else {str <- 'Time Error'}
       pander::pander(glue::glue('<i class="far fa-copyright"></i>{str}'))
     }

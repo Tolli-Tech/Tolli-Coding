@@ -1498,8 +1498,8 @@ along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;. </c
 <p>You need to run this function first <code>install.packages("lubridate")</code> or <code>install.packages("tidyverse")</code>.</p>
 <pre><code>copyright &lt;- function(start, name){
   current_year &lt;- lubridate::year(Sys.Date()) 
-  if (current_year != start) {str &lt;- glue::glue(&#39;{start} - {current_year} -- {name}&#39;)}
-  else if (start &lt; current_year) {str &lt;- glue::glue(&#39;{current_year} -- {name}&#39;)}
+  if (start &lt; current_year) {str &lt;- glue::glue(&#39;{start} - {current_year} -- {name}&#39;)}
+  else if (start == current_year) {str &lt;- glue::glue(&#39;{current_year} -- {name}&#39;)}
   else {str &lt;- &#39;Time Error&#39;}
   pander::pander(glue::glue(&#39;&lt;i class=&quot;far fa-copyright&quot;&gt;&lt;/i&gt;{str}&#39;))
 }</code></pre>
