@@ -1478,16 +1478,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="d-article">
 <p>This page is a tutorial of r function that helps make copyrighting intellectual property on a website. I also walks through the file header needed to license property with <em>GNU General Public License</em>.</p>
 <p>You need to run this function first <code>install.packages("lubridate")</code> or <code>install.packages("tidyverse")</code>.</p>
-<h2 id="the-r-function">The R function</h2>
-<pre><code>copyright &lt;- function(start, name){
-  current_year &lt;- lubridate::year(Sys.Date()) 
-  if (current_year != start) {str &lt;- glue::glue(&#39;{start} - {current_year} -- {name}&#39;)}
-  else if (start &lt; current_year) {str &lt;- glue::glue(&#39;{current_year} -- {name}&#39;)}
-  else {str &lt;- &#39;Time Error&#39;}
-  pander::pander(glue::glue(&#39;&lt;i class=&quot;far fa-copyright&quot;&gt;&lt;/i&gt;{str}&#39;))
-}</code></pre>
-<p>This function is needs a start year and name pass into the function call.</p>
-<p>To calculate current year the <a href="https://lubridate.tidyverse.org/">lubridate</a> package is used.</p>
 <h2 id="file-header">File Header</h2>
 <pre><code>file name 
 Copyright year name 
@@ -1505,7 +1495,23 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License 
 along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;. </code></pre>
 <p>At the top of all programming files paste the above section and comment it out. I would suggest using <em>GNU General Public License</em> to license your work.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<h2 id="the-r-function">The R function</h2>
+<pre><code>copyright &lt;- function(start, name){
+  current_year &lt;- lubridate::year(Sys.Date()) 
+  if (current_year != start) {str &lt;- glue::glue(&#39;{start} - {current_year} -- {name}&#39;)}
+  else if (start &lt; current_year) {str &lt;- glue::glue(&#39;{current_year} -- {name}&#39;)}
+  else {str &lt;- &#39;Time Error&#39;}
+  pander::pander(glue::glue(&#39;&lt;i class=&quot;far fa-copyright&quot;&gt;&lt;/i&gt;{str}&#39;))
+}</code></pre>
+<p>This function is needs a start year and name pass into the function call.</p>
+<p>To calculate current year the <a href="https://lubridate.tidyverse.org/">lubridate</a> package is used.</p>
+<h2 id="javascript">JavaScript</h2>
+<pre><code>let current_year = new Date().getFullYear();
+document.getElementById(&#39;current_year&#39;).textContent = current_year;</code></pre>
+<p>This is another to implement the current year code but with JavaScript.</p>
+<pre><code>&amp;copy; &lt;span id=&quot;current_year&quot;&gt;&lt;/span&gt; Name</code></pre>
+<p>This is the HTML needed to implement the JS code from above.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

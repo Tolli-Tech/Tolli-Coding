@@ -14,20 +14,6 @@ I also walks through the file header needed to license property with *GNU Genera
 
 You need to run this function first `install.packages("lubridate")` or `install.packages("tidyverse")`.
 
-## The R function
-
-    copyright <- function(start, name){
-      current_year <- lubridate::year(Sys.Date()) 
-      if (current_year != start) {str <- glue::glue('{start} - {current_year} -- {name}')}
-      else if (start < current_year) {str <- glue::glue('{current_year} -- {name}')}
-      else {str <- 'Time Error'}
-      pander::pander(glue::glue('<i class="far fa-copyright"></i>{str}'))
-    }
-    
-This function is needs a start year and name pass into the function call. 
-
-To calculate current year the [lubridate](https://lubridate.tidyverse.org/) package is used.
-
 ## File Header
 
     file name 
@@ -47,3 +33,28 @@ To calculate current year the [lubridate](https://lubridate.tidyverse.org/) pack
     along with this program.  If not, see <https://www.gnu.org/licenses/>. 
     
 At the top of all programming files paste the above section and comment it out. I would suggest using *GNU General Public License* to license your work.
+
+## The R function
+
+    copyright <- function(start, name){
+      current_year <- lubridate::year(Sys.Date()) 
+      if (current_year != start) {str <- glue::glue('{start} - {current_year} -- {name}')}
+      else if (start < current_year) {str <- glue::glue('{current_year} -- {name}')}
+      else {str <- 'Time Error'}
+      pander::pander(glue::glue('<i class="far fa-copyright"></i>{str}'))
+    }
+    
+This function is needs a start year and name pass into the function call. 
+
+To calculate current year the [lubridate](https://lubridate.tidyverse.org/) package is used.
+
+## JavaScript
+
+    let current_year = new Date().getFullYear();
+    document.getElementById('current_year').textContent = current_year;
+    
+This is another to implement the current year code but with JavaScript.      
+    
+    &copy; <span id="current_year"></span> Name
+
+This is the HTML needed to implement the JS code from above. 
