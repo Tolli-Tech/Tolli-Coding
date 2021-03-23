@@ -19,7 +19,9 @@ render_site()
 ```{r}
 print_h2("Contact Me")
 print_contact(file)
-print_h3("Support Me")
-pander("[Venmo me](https://account.venmo.com/) -- @Kyle-C-Tolliver")
+pander("### Support Me \n [Venmo me](https://account.venmo.com/)  @Kyle-C-Tolliver \n\n")
+pagebreak()
+pander("## R Bloggers \n If you are interested in learning from other R users, go to [r-bloggers.com](https://www.r-bloggers.com/)! \n\n")
+pagebreak()
+copyright(2021)
 ```
-
