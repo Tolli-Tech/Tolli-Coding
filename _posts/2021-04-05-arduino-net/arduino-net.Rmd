@@ -1,0 +1,98 @@
+---
+title: "Arduino Net"
+description: |
+  Ethernet request on Arduino
+author: Kyle Tolliver
+date: 04-05-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+pacman::p_load(tidyverse, pacman, knitr, rmarkdown, pander, glue)
+opts_chunk$set(results = 'asis', echo = FALSE, message = FALSE, warning = FALSE) ## Chunk Displays
+```
+
+This tutorial will walk you through how to make a ethernet request with Arduino. 
+
+For more see https://arduinogetstarted.com/tutorials/arduino-http-request. 
+
+## Arduino Ethernet Shield
+
+The Ethernet Shield can be bought on [Amazon](https://www.amazon.com/dp/B00AXVX5D0).  
+
+Shields are built for the Arduino Uno but can be used on any Arduino.
+
+Shields just sit on top the Arduino connecting the corresponding pins. 
+
+## Steps
+
+1. Put Shield on Arduino
+2. Plug Ethernet cord into Shield
+3. Plug the Arduino into Computer
+4. Upload needed code (see below)
+5. Open Serial Monitor and view output
+6. View network traffic on WireShark
+
+### The Needed Code
+
+```
+/*Arduino Http Request */
+
+#include <SPI.h>
+#include <Ethernet.h>
+
+// replace the MAC address below by the MAC address printed on a sticker on the Arduino Shield 2
+byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
+
+EthernetClient client;
+
+int    HTTP_PORT   = 80;
+String HTTP_METHOD = "GET"; // or POST
+char   HOST_NAME[] = "maker.ifttt.com";
+String PATH_NAME   = "/trigger";
+
+void setup() {
+  Serial.begin(9600);
+  request();
+}
+
+void loop() {}
+
+void request() {
+  // initialize the Ethernet shield using DHCP:
+  if (Ethernet.begin(mac) == 0) {
+    Serial.println("Failed to obtaining an IP address using DHCP");
+    while(true);
+  }
+
+  // connect to web server on port 80:
+  if(client.connect(HOST_NAME, HTTP_PORT)) {
+    // if connected:
+    Serial.println("Connected to server");
+    // make a HTTP request:
+    // send HTTP header
+    client.println(HTTP_METHOD + " " + PATH_NAME + " HTTP/1.1");
+    client.println("Host: " + String(HOST_NAME));
+    client.println("Connection: close");
+    client.println(); // end HTTP header
+
+    while(client.connected()) {
+      if(client.available()){
+        // read an incoming byte from the server and print it to serial monitor:
+        char c = client.read();
+        Serial.print(c);
+      }
+    }
+
+    // the server's disconnected, stop the client:
+    client.stop();
+    Serial.println();
+    Serial.println("disconnected");
+  } else {// if not connected:
+    Serial.println("connection failed");
+  }
+}
+
+```

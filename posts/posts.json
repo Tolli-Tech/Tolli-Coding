@@ -1,5 +1,22 @@
 [
   {
+    "path": "posts/2021-04-05-arduino-net/",
+    "title": "Arduino Net",
+    "description": "Ethernet request on Arduino",
+    "author": [
+      {
+        "name": "Kyle Tolliver",
+        "url": {}
+      }
+    ],
+    "date": "2021-04-05",
+    "categories": [],
+    "contents": "\r\nThis tutorial will walk you through how to make a ethernet request with Arduino.\r\nFor more see https://arduinogetstarted.com/tutorials/arduino-http-request.\r\nArduino Ethernet Shield\r\nThe Ethernet Shield can be bought on Amazon.\r\nShields are built for the Arduino Uno but can be used on any Arduino.\r\nShields just sit on top the Arduino connecting the corresponding pins.\r\nSteps\r\nPut Shield on Arduino\r\nPlug Ethernet cord into Shield\r\nPlug the Arduino into Computer\r\nUpload needed code (see below)\r\nOpen Serial Monitor and view output\r\nView network traffic on WireShark\r\nThe Needed Code\r\n/*Arduino Http Request */\r\n\r\n#include <SPI.h>\r\n#include <Ethernet.h>\r\n\r\n// replace the MAC address below by the MAC address printed on a sticker on the Arduino Shield 2\r\nbyte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };\r\n\r\nEthernetClient client;\r\n\r\nint    HTTP_PORT   = 80;\r\nString HTTP_METHOD = \"GET\"; // or POST\r\nchar   HOST_NAME[] = \"maker.ifttt.com\";\r\nString PATH_NAME   = \"/trigger\";\r\n\r\nvoid setup() {\r\n  Serial.begin(9600);\r\n  request();\r\n}\r\n\r\nvoid loop() {}\r\n\r\nvoid request() {\r\n  // initialize the Ethernet shield using DHCP:\r\n  if (Ethernet.begin(mac) == 0) {\r\n    Serial.println(\"Failed to obtaining an IP address using DHCP\");\r\n    while(true);\r\n  }\r\n\r\n  // connect to web server on port 80:\r\n  if(client.connect(HOST_NAME, HTTP_PORT)) {\r\n    // if connected:\r\n    Serial.println(\"Connected to server\");\r\n    // make a HTTP request:\r\n    // send HTTP header\r\n    client.println(HTTP_METHOD + \" \" + PATH_NAME + \" HTTP/1.1\");\r\n    client.println(\"Host: \" + String(HOST_NAME));\r\n    client.println(\"Connection: close\");\r\n    client.println(); // end HTTP header\r\n\r\n    while(client.connected()) {\r\n      if(client.available()){\r\n        // read an incoming byte from the server and print it to serial monitor:\r\n        char c = client.read();\r\n        Serial.print(c);\r\n      }\r\n    }\r\n\r\n    // the server's disconnected, stop the client:\r\n    client.stop();\r\n    Serial.println();\r\n    Serial.println(\"disconnected\");\r\n  } else {// if not connected:\r\n    Serial.println(\"connection failed\");\r\n  }\r\n}\r\n\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2021-04-05T23:31:52-06:00",
+    "input_file": {}
+  },
+  {
     "path": "posts/2021-03-26-full-stack-r/",
     "title": "Full Stack with R",
     "description": "How to do 'Full Stack Web Development' with R",
